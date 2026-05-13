@@ -8,7 +8,10 @@ from app.models import UsuarioDB
 
 
 # Constantes para la generación de tokens JWT
-SECRET_KEY = "tdah_secret_key"
+import os
+
+SECRET_KEY = os.getenv("SECRET_KEY")
+#SECRET_KEY = "tdah_secret_key"
 ALGORITHM = "HS256"
 ACCESS_TOKEN_EXPIRE_MINUTES = 60
 
